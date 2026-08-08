@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .page-banner {
@@ -99,6 +100,34 @@
             height: 300px;
             display: block;
             border-radius: 19px;
+        }
+
+        .contact-social {
+            display: flex;
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .contact-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid #e5e7eb;
+            background: #f8f9fa;
+            color: #002244;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-social a:hover {
+            background: #002244;
+            color: #fff;
+            border-color: #002244;
+            transform: translateY(-2px);
         }
 
         @media (max-width: 768px) {
@@ -237,25 +266,34 @@
                 
             </div>
 
+            <div class="venue-info">
+                <h2>Follow Us</h2>
+                <div class="contact-social">
+                    <a href="https://www.facebook.com/TENSYMP2027" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/tensymp2027/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://x.com/tensymp2027" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
             <!--
                 <div class="contact-block">
                     <h3>General Enquiries</h3>
-                    <p><a href="mailto:info@tensymp2027.org">info@tensymp2027.org</a></p>
+                    <p><a href="mailto:info@tensymp27.ieee.lk">info@tensymp27.ieee.lk</a></p>
                 </div>
 
                 <div class="contact-block">
                     <h3>Paper Submissions</h3>
-                    <p><a href="mailto:papers@tensymp2027.org">papers@tensymp2027.org</a></p>
+                    <p><a href="mailto:papers@tensymp27.ieee.lk">papers@tensymp27.ieee.lk</a></p>
                 </div>
 
                 <div class="contact-block">
                     <h3>Registration</h3>
-                    <p><a href="mailto:registration@tensymp2027.org">registration@tensymp2027.org</a></p>
+                    <p><a href="mailto:registration@tensymp27.ieee.lk">registration@tensymp27.ieee.lk</a></p>
                 </div>
 
                 <div class="contact-block">
                     <h3>Sponsorship</h3>
-                    <p><a href="mailto:sponsors@tensymp2027.org">sponsors@tensymp2027.org</a></p>
+                    <p><a href="mailto:sponsors@tensymp27.ieee.lk">sponsors@tensymp27.ieee.lk</a></p>
                 </div>
             </div> -->
 
@@ -289,6 +327,12 @@
                     Faculty of Engineering<br>
                     University of Peradeniya, Sri Lanka
                 </p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/TENSYMP2027" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/tensymp2027/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://x.com/tensymp2027" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+
             </div>
 
             <div class="footer-col">
@@ -328,6 +372,7 @@
         <div class="footer-bottom">
             <p>
                 © 2027 IEEE Sri Lanka Section · IEEE TENSYMP 2027<br>
+                <a href="https://tensymp27.ieee.lk" target="_blank" rel="noopener">https://tensymp27.ieee.lk</a>
                 All rights reserved.
             </p>
         </div>

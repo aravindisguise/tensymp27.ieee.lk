@@ -850,6 +850,31 @@ body {
     color: #c4cfdb;
 }
 
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e6ecf2;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #ffffff;
+    color: #001a33;
+    transform: translateY(-2px);
+}
+
 @media (max-width: 600px) {
     .footer-container {
         text-align: center;
@@ -857,6 +882,10 @@ body {
 
     .footer-col ul li a:hover {
         padding-left: 0;
+    }
+
+    .footer-social {
+        justify-content: center;
     }
 }
 
