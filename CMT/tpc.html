@@ -117,9 +117,107 @@
             margin: 0;
         }
 
+        /* Track Card - single card per track */
+        .track-card {
+            border: 1px solid #e5e7eb;
+            background: #fff;
+            padding: 0;
+            margin-bottom: 24px;
+            transition: box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .track-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 34, 68, 0.1);
+        }
+
+        .track-card-header {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary);
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .track-card-header i {
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+
+        .track-card-header h4 {
+            margin: 0;
+            font-size: 1.05rem;
+            color: #002244;
+            font-weight: 600;
+        }
+
+        .track-card-body {
+            padding: 20px 24px;
+        }
+
+        .track-person {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 12px 0;
+        }
+
+        .track-person + .track-person {
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .track-person-role {
+            flex-shrink: 0;
+            font-size: 0.75rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            background: #f0f4f8;
+            padding: 4px 10px;
+            border-radius: 4px;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .track-person-info .name {
+            font-size: 1.05rem;
+            color: #002244;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .track-person-info .affiliation {
+            font-size: 0.88rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .track-person-info .affiliation strong {
+            color: #002244;
+        }
+
+        .track-section-label {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            margin-top: 4px;
+        }
+
         @media (max-width: 900px) {
             .committee-grid {
                 grid-template-columns: 1fr;
+            }
+            .track-person {
+                flex-direction: column;
+                gap: 6px;
+            }
+            .track-person-role {
+                align-self: flex-start;
             }
         }
 
@@ -201,7 +299,6 @@
                         <li><a href="../CMT/organizing.html">Organizing Committee</a></li>
                         <li><a href="../CMT/tpc.html">Technical Program Committee</a>
                         </li>
-                        <li><a href="#">Track Chairs & Co-Chairs</a></li>
                         <li><a href="../CMT/intl_advisory.html">International Reviewers</a>
                         </li>
                     </ul>
@@ -259,101 +356,202 @@
         </div>
     </div>
 
-    <h3>Technical Program Co-Chairs</h3>
-    <div class="committee-grid">
-        <div class="committee-card">
-            <div class="role">Co-Chair</div>
-            <div class="name">Prof. Tharaka Samarasinghe</div>
-            <div class="research-area">Future Communication and Networking Technologies</div>
-            <div class="affiliation">
-                <strong>Department of Electronic and Telecommunication Engineering</strong><br>
-                Faculty of Engineering<br>
-                University of Moratuwa
+    <h3>Track Chairs &amp; Track Co-Chairs</h3>
+
+    <div class="track-card">
+        <div class="track-card-header">
+            <i class="fas fa-brain"></i>
+            <h4>Artificial Intelligence, Machine Learning, and Data Intelligence</h4>
+        </div>
+        <div class="track-card-body">
+            <div class="track-person">
+                <div class="track-person-role">Track Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Dr. Damayanthi Herath</div>
+                    <div class="affiliation"><strong>Department of Computer Engineering</strong><br>Faculty of Engineering, University of Peradeniya</div>
+                </div>
+            </div>
+            <div class="track-person">
+                <div class="track-person-role">Track Co-Chair</div>
+                <div class="track-person-info">
+                    <div class="name">To Be Decided</div>
+                    <div class="affiliation">&nbsp;</div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="committee-card">
-            <div class="role">Co-Chair</div>
-            <div class="name">Dr. Damayanthi Herath</div>
-            <div class="research-area">Artificial Intelligence, Machine Learning, and Data Intelligence</div>
-            <div class="affiliation">
-                <strong>Department of Computer Engineering</strong><br>
-                Faculty of Engineering<br>
-                University of Peradeniya
+    <div class="track-card">
+        <div class="track-card-header">
+            <i class="fas fa-microchip"></i>
+            <h4>Cyber-Physical Systems, IoT, and Intelligent Automation</h4>
+        </div>
+        <div class="track-card-body">
+            <div class="track-person">
+                <div class="track-person-role">Track Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Prof. Michel Ong</div>
+                    <div class="affiliation"><strong>Chair, Singapore Section</strong><br>IEEE Region 10</div>
+                </div>
+            </div>
+            <div class="track-person">
+                <div class="track-person-role">Track Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Prof. Pradeep Abeygunawardenepura</div>
+                    <div class="affiliation">Sri Lanka Institute of Information Technology (SLIIT)</div>
+                </div>
+            </div>
+            <div class="track-person">
+                <div class="track-person-role">Track Co-Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Prof. (Ms.) Bhagya Nathalie Silva</div>
+                    <div class="affiliation"><strong>Department of Information Technology</strong><br>Faculty of Computing, Sri Lanka Institute of Information Technology (SLIIT)</div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="committee-card">
-            <div class="role">Co-Chair</div>
-            <div class="name">Prof. Manivannan Siyamalan</div>
-            <div class="research-area">Technology for Health, Humanity, and Society</div>
-            <div class="affiliation">
-                <strong>Department of Computer Science</strong><br>
-                Faculty of Science<br>
-                University of Jaffna
+    <div class="track-card">
+        <div class="track-card-header">
+            <i class="fas fa-shield-halved"></i>
+            <h4>Cybersecurity, Privacy, and Resilient Computing</h4>
+        </div>
+        <div class="track-card-body">
+            <div class="track-person">
+                <div class="track-person-role">Track Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Dr. Viraj Muthugala</div>
+                    <div class="affiliation">Singapore University of Technology and Design (SUTD), Singapore</div>
+                </div>
+            </div>
+            <div class="track-person">
+                <div class="track-person-role">Track Co-Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Dr. (Ms.) Bhagya Samarakoon</div>
+                    <div class="affiliation">Singapore University of Technology and Design (SUTD), Singapore</div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="committee-card">
-            <div class="role">Co-Chair</div>
-            <div class="name">Prof. Sidath Liyanage</div>
-            <div class="research-area">Sustainable Energy and Environmental Technologies</div>
-            <div class="affiliation">
-                <strong>Faculty of Computing and Technology</strong><br>
-                University of Kelaniya
+    <div class="track-card">
+        <div class="track-card-header">
+            <i class="fas fa-graduation-cap"></i>
+            <h4>Education and Capacity Building in Resilient Technologies</h4>
+        </div>
+        <div class="track-card-body">
+            <div class="track-person">
+                <div class="track-person-role">Track Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Dr. Asitha Bandaranayake</div>
+                    <div class="affiliation"><strong>Department of Computer Engineering</strong><br>Faculty of Engineering, University of Peradeniya</div>
+                </div>
+            </div>
+            <div class="track-person">
+                <div class="track-person-role">Track Co-Chair</div>
+                <div class="track-person-info">
+                    <div class="name">To Be Decided</div>
+                    <div class="affiliation">&nbsp;</div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="committee-card">
-            <div class="role">Co-Chair</div>
-            <div class="name">Prof. Lasith Gunawardena</div>
-            <div class="research-area">Ethics, Policy, and Governance in Connected Systems</div>
-            <div class="affiliation">
-                <strong>Department of Information Technology</strong><br>
-                University of Sri Jayewardenepura
+    <div class="track-card">
+        <div class="track-card-header">
+            <i class="fas fa-scale-balanced"></i>
+            <h4>Ethics, Policy, and Governance in Connected Systems</h4>
+        </div>
+        <div class="track-card-body">
+            <div class="track-person">
+                <div class="track-person-role">Track Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Prof. Lasith Gunawardena</div>
+                    <div class="affiliation"><strong>Department of Information Technology</strong><br>University of Sri Jayewardenepura</div>
+                </div>
+            </div>
+            <div class="track-person">
+                <div class="track-person-role">Track Co-Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Dr. Shashi Charles</div>
+                    <div class="affiliation">James Cook University, Brisbane, Australia</div>
+                </div>
             </div>
         </div>
+    </div>
 
-
-
-        <div class="committee-card">
-            <div class="role">Co-Chair</div>
-            <div class="name">Dr. Asitha Bandaranayake</div>
-            <div class="research-area">Education and Capacity Building in Resilient Technologies</div>
-            <div class="affiliation">
-                <strong>Department of Computer Engineering</strong><br>
-                Faculty of Engineering<br>
-                University of Peradeniya
+    <div class="track-card">
+        <div class="track-card-header">
+            <i class="fas fa-satellite-dish"></i>
+            <h4>Future Communication and Networking Technologies</h4>
+        </div>
+        <div class="track-card-body">
+            <div class="track-person">
+                <div class="track-person-role">Track Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Prof. Tharaka Samarasinghe</div>
+                    <div class="affiliation"><strong>Department of Electronic and Telecommunication Engineering</strong><br>Faculty of Engineering, University of Moratuwa</div>
+                </div>
+            </div>
+            <div class="track-person">
+                <div class="track-person-role">Track Co-Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Prof. Madhusanka Liyanage</div>
+                    <div class="affiliation">University College Dublin, School of Computer Science, Ireland</div>
+                </div>
+            </div>
+            <div class="track-person">
+                <div class="track-person-role">Track Co-Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Prof. Dushantha Jayakody</div>
+                    <div class="affiliation"><strong>Department of Electrical &amp; Electronic Engineering</strong><br>Sri Lanka Institute of Information Technology (SLIIT)</div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="committee-card">
-            <div class="role">Co-Chair</div>
-            <div class="name">Prof. Michel Ong</div>
-            <div class="research-area">Cyber-Physical Systems, IoT, and Intelligent Automation</div>
-            <div class="affiliation">
-                <strong>Chair, Singapore Section</strong><br>
-                IEEE Region 10
+    <div class="track-card">
+        <div class="track-card-header">
+            <i class="fas fa-leaf"></i>
+            <h4>Sustainable Energy and Environmental Technologies</h4>
+        </div>
+        <div class="track-card-body">
+            <div class="track-person">
+                <div class="track-person-role">Track Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Prof. Sidath Liyanage</div>
+                    <div class="affiliation"><strong>Faculty of Computing and Technology</strong><br>University of Kelaniya</div>
+                </div>
+            </div>
+            <div class="track-person">
+                <div class="track-person-role">Track Co-Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Dr. Chanaka Udayanga</div>
+                    <div class="affiliation"><strong>Department of Applied Computing</strong><br>Faculty of Computing and Technology, University of Kelaniya</div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="committee-card">
-            <div class="role">Co-Chair</div>
-            <div class="name">Prof. Pradeep Abeygunawardenepura</div>
-            <div class="research-area">Cyber-Physical Systems, IoT, and Intelligent Automation</div>
-            <div class="affiliation">
-                <strong>Sri Lanka Institute of Information Technology</strong><br>
-                Sri Lanka
-            </div>
+    <div class="track-card">
+        <div class="track-card-header">
+            <i class="fas fa-heartbeat"></i>
+            <h4>Technology for Health, Humanity, and Society</h4>
         </div>
-
-        <div class="committee-card">
-            <div class="role">Co-Chair</div>
-            <div class="name">Dr. Viraj Muthugala</div>
-            <div class="research-area">Cybersecurity, Privacy, and Resilient Computing</div>
-            <div class="affiliation">
-                
-                Singapore University of Technology and Design (SUTD)
+        <div class="track-card-body">
+            <div class="track-person">
+                <div class="track-person-role">Track Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Prof. Manivannan Siyamalan</div>
+                    <div class="affiliation"><strong>Department of Computer Science</strong><br>Faculty of Science, University of Jaffna</div>
+                </div>
+            </div>
+            <div class="track-person">
+                <div class="track-person-role">Track Co-Chair</div>
+                <div class="track-person-info">
+                    <div class="name">Dr. (Ms.) R. Nirthika</div>
+                    <div class="affiliation"><strong>Department of Computer Science</strong><br>Faculty of Science, University of Jaffna</div>
+                </div>
             </div>
         </div>
     </div>
